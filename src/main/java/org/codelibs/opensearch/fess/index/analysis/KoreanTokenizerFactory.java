@@ -33,7 +33,7 @@ import org.opensearch.index.analysis.TokenizerFactory;
 public class KoreanTokenizerFactory extends AbstractTokenizerFactory {
 
     // TODO OpenSearch support
-    private static final String FACTORY = "org.elasticsearch.index.analysis.NoriTokenizerFactory";
+    private static final String FACTORY = "org.opensearch.index.analysis.NoriTokenizerFactory";
 
     private TokenizerFactory tokenizerFactory = null;
 

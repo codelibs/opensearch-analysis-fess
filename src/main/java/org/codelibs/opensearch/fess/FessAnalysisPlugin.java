@@ -56,11 +56,9 @@ public class FessAnalysisPlugin extends Plugin implements AnalysisPlugin, Mapper
 
     @Override
     public Collection<Object> createComponents(Client client, ClusterService clusterService, ThreadPool threadPool,
-            ResourceWatcherService resourceWatcherService, ScriptService scriptService,
-            NamedXContentRegistry xContentRegistry, Environment environment,
-            NodeEnvironment nodeEnvironment, NamedWriteableRegistry namedWriteableRegistry,
-            IndexNameExpressionResolver indexNameExpressionResolver,
-            Supplier<RepositoriesService> repositoriesServiceSupplier) {
+            ResourceWatcherService resourceWatcherService, ScriptService scriptService, NamedXContentRegistry xContentRegistry,
+            Environment environment, NodeEnvironment nodeEnvironment, NamedWriteableRegistry namedWriteableRegistry,
+            IndexNameExpressionResolver indexNameExpressionResolver, Supplier<RepositoriesService> repositoriesServiceSupplier) {
         final Collection<Object> components = new ArrayList<>();
         components.add(pluginComponent);
         return components;

@@ -31,7 +31,7 @@ import org.opensearch.index.analysis.CharFilterFactory;
 
 public class TraditionalChineseConvertCharFilterFactory extends AbstractCharFilterFactory {
 
-    private static final String FACTORY = "org.elasticsearch.index.analysis.STConvertCharFilterFactory";
+    private static final String FACTORY = "org.opensearch.index.analysis.STConvertCharFilterFactory";
 
     private CharFilterFactory charFilterFactory = null;
 

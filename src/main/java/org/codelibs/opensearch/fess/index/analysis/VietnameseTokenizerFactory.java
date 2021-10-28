@@ -33,7 +33,7 @@ import org.opensearch.index.analysis.TokenizerFactory;
 public class VietnameseTokenizerFactory extends AbstractTokenizerFactory {
 
     // TODO OpenSearch support
-    private static final String FACTORY = "org.codelibs.elasticsearch.vi.analysis.VietnameseTokenizerFactory";
+    private static final String FACTORY = "org.codelibs.opensearch.vi.analysis.VietnameseTokenizerFactory";
 
     private TokenizerFactory tokenizerFactory = null;
 

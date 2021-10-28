@@ -32,7 +32,7 @@ public class FessAnalysisService extends AbstractLifecycleComponent {
     }
 
     @Override
-    protected void doStart()  {
+    protected void doStart() {
         logger.debug("Starting FessAnalysisService");
 
         plugins = loadPlugins();
@@ -52,12 +52,12 @@ public class FessAnalysisService extends AbstractLifecycleComponent {
     }
 
     @Override
-    protected void doStop()   {
+    protected void doStop() {
         logger.debug("Stopping FessAnalysisService");
     }
 
     @Override
-    protected void doClose()   {
+    protected void doClose() {
         logger.debug("Closing FessAnalysisService");
     }
 

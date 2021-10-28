@@ -33,7 +33,7 @@ import org.opensearch.index.analysis.TokenizerFactory;
 public class ChineseTokenizerFactory extends AbstractTokenizerFactory {
 
     // TODO OpenSearch support
-    private static final String FACTORY = "org.elasticsearch.index.analysis.SmartChineseTokenizerTokenizerFactory";
+    private static final String FACTORY = "org.opensearch.index.analysis.SmartChineseTokenizerTokenizerFactory";
 
     private TokenizerFactory tokenizerFactory = null;
 

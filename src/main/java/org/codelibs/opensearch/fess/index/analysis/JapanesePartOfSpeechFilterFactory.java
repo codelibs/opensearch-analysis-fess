@@ -32,7 +32,8 @@ import org.opensearch.index.analysis.TokenFilterFactory;
 public class JapanesePartOfSpeechFilterFactory extends AbstractTokenFilterFactory {
 
     private static final String[] FACTORIES = new String[] { //
-            "org.codelibs.opensearch.extension.kuromoji.index.analysis.KuromojiPartOfSpeechFilterFactory" };
+            "org.codelibs.opensearch.extension.kuromoji.index.analysis.KuromojiPartOfSpeechFilterFactory",
+            "org.opensearch.index.analysis.KuromojiPartOfSpeechFilterFactory" };
 
     private TokenFilterFactory tokenFilterFactory = null;
 

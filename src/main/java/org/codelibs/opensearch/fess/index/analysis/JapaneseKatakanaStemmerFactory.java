@@ -32,7 +32,8 @@ import org.opensearch.index.analysis.TokenFilterFactory;
 public class JapaneseKatakanaStemmerFactory extends AbstractTokenFilterFactory {
 
     private static final String[] FACTORIES = new String[] { //
-            "org.codelibs.opensearch.extension.kuromoji.index.analysis.KuromojiKatakanaStemmerFactory" };
+            "org.codelibs.opensearch.extension.kuromoji.index.analysis.KuromojiKatakanaStemmerFactory",
+            "org.opensearch.index.analysis.KuromojiKatakanaStemmerFactory" };
 
     private TokenFilterFactory tokenFilterFactory;
 
