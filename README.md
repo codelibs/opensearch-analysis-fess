@@ -1,5 +1,5 @@
 OpenSearch Analysis Fess
-[![Java CI with Maven](https://github.com/codelibs/elasticsearch-analysis-fess/actions/workflows/maven.yml/badge.svg)](https://github.com/codelibs/elasticsearch-analysis-fess/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/codelibs/opensearch-analysis-fess/actions/workflows/maven.yml/badge.svg)](https://github.com/codelibs/opensearch-analysis-fess/actions/workflows/maven.yml)
 =======================
 
 ## Overview
@@ -8,15 +8,15 @@ OpenSearch Analysis Fess Plugin is an analysis library for Fess.
 
 ## Version
 
-[Versions in Maven Repository](https://repo1.maven.org/maven2/org/codelibs/elasticsearch-analysis-fess/)
+[Versions in Maven Repository](https://repo1.maven.org/maven2/org/codelibs/opensearch-analysis-fess/)
 
 ### Issues/Questions
 
-Please file an [issue](https://github.com/codelibs/elasticsearch-analysis-fess/issues "issue").
+Please file an [issue](https://github.com/codelibs/opensearch-analysis-fess/issues "issue").
 
 ## Installation
 
-    $ $ES_HOME/bin/elasticsearch-plugin install org.codelibs:elasticsearch-analysis-fess:7.6.0
+    $ $OPENSEARCH_HOME/bin/opensearch-plugin install org.codelibs:opensearch-analysis-fess:1.1.0
 
 ## Usage
 
