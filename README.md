@@ -8,7 +8,7 @@ OpenSearch Analysis Fess Plugin is an analysis library for Fess.
 
 ## Version
 
-[Versions in Maven Repository](https://repo1.maven.org/maven2/org/codelibs/opensearch-analysis-fess/)
+[Versions in Maven Repository](https://repo1.maven.org/maven2/org/codelibs/opensearch/opensearch-analysis-fess/)
 
 ### Issues/Questions
 
