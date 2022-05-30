@@ -63,7 +63,6 @@ public class FessAnalysisPluginTest {
         Node node = runner.node();
 
         final String index = "dataset";
-        final String type = "item";
 
         final String indexSettings = "{\"index\":{\"analysis\":{" + "\"tokenizer\":{"//
                 + "\"ja_user_dict\":{\"type\":\"fess_japanese_tokenizer\",\"mode\":\"extended\",\"user_dictionary\":\"userdict_ja.txt\"}"
@@ -76,7 +75,6 @@ public class FessAnalysisPluginTest {
         // create a mapping
         final XContentBuilder mappingBuilder = XContentFactory.jsonBuilder()//
                 .startObject()//
-                .startObject(type)//
                 .startObject("properties")//
 
                 // id
@@ -91,11 +89,10 @@ public class FessAnalysisPluginTest {
                 .endObject()//
 
                 .endObject()//
-                .endObject()//
                 .endObject();
-        runner.createMapping(index, type, mappingBuilder);
+        runner.createMapping(index, mappingBuilder);
 
-        final IndexResponse indexResponse1 = runner.insert(index, type, "1", "{\"msg\":\"東京スカイツリー\", \"id\":\"1\"}");
+        final IndexResponse indexResponse1 = runner.insert(index, "1", "{\"msg\":\"東京スカイツリー\", \"id\":\"1\"}");
         assertEquals(Result.CREATED, indexResponse1.getResult());
         runner.refresh();
 
