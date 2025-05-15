@@ -1,3 +1,18 @@
+/*
+ * Copyright 2012-2025 CodeLibs Project and the Others.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
 package org.codelibs.opensearch.fess;
 
 import java.util.ArrayList;
@@ -20,7 +35,6 @@ import org.codelibs.opensearch.fess.index.analysis.ReloadableJapaneseTokenizerFa
 import org.codelibs.opensearch.fess.index.analysis.TraditionalChineseConvertCharFilterFactory;
 import org.codelibs.opensearch.fess.index.analysis.VietnameseTokenizerFactory;
 import org.codelibs.opensearch.fess.service.FessAnalysisService;
-import org.opensearch.client.Client;
 import org.opensearch.cluster.metadata.IndexNameExpressionResolver;
 import org.opensearch.cluster.service.ClusterService;
 import org.opensearch.common.lifecycle.LifecycleComponent;
@@ -41,6 +55,7 @@ import org.opensearch.plugins.SystemIndexPlugin;
 import org.opensearch.repositories.RepositoriesService;
 import org.opensearch.script.ScriptService;
 import org.opensearch.threadpool.ThreadPool;
+import org.opensearch.transport.client.Client;
 import org.opensearch.watcher.ResourceWatcherService;
 
 public class FessAnalysisPlugin extends Plugin implements AnalysisPlugin, MapperPlugin, SystemIndexPlugin {

@@ -1,5 +1,5 @@
 /*
- * Copyright 2009-2016 the CodeLibs Project and the Others.
+ * Copyright 2012-2025 CodeLibs Project and the Others.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
  * either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
 package org.codelibs.opensearch.fess.index.analysis;
 
 import java.lang.reflect.Constructor;
@@ -30,10 +29,10 @@ import org.opensearch.index.IndexSettings;
 import org.opensearch.index.analysis.AbstractTokenizerFactory;
 import org.opensearch.index.analysis.TokenizerFactory;
 
+@Deprecated
 public class ReloadableJapaneseTokenizerFactory extends AbstractTokenizerFactory {
 
     private static final String[] FACTORIES = new String[] { //
-            "org.codelibs.opensearch.extension.analysis.ReloadableKuromojiTokenizerFactory",
             "org.opensearch.index.analysis.KuromojiTokenizerFactory" };
 
     private TokenizerFactory tokenizerFactory = null;
@@ -41,6 +40,8 @@ public class ReloadableJapaneseTokenizerFactory extends AbstractTokenizerFactory
     public ReloadableJapaneseTokenizerFactory(final IndexSettings indexSettings, final Environment env, final String name,
             final Settings settings, final FessAnalysisService fessAnalysisService) {
         super(indexSettings, settings, name);
+
+        logger.warn("ReloadableJapaneseTokenizerFactory is deprecated. Use JapaneseTokenizerFactory instead.");
 
         for (final String factoryClass : FACTORIES) {
             final Class<?> tokenizerFactoryClass = fessAnalysisService.loadClass(factoryClass);
