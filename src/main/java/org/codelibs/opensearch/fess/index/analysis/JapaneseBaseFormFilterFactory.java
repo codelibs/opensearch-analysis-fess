@@ -1,5 +1,5 @@
 /*
- * Copyright 2009-2016 the CodeLibs Project and the Others.
+ * Copyright 2012-2025 CodeLibs Project and the Others.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
  * either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
 package org.codelibs.opensearch.fess.index.analysis;
 
 import java.lang.reflect.Constructor;
@@ -32,7 +31,6 @@ import org.opensearch.index.analysis.TokenFilterFactory;
 public class JapaneseBaseFormFilterFactory extends AbstractTokenFilterFactory {
 
     private static final String[] FACTORIES = new String[] { //
-            "org.codelibs.opensearch.extension.kuromoji.index.analysis.KuromojiBaseFormFilterFactory",
             "org.opensearch.index.analysis.KuromojiBaseFormFilterFactory" };
 
     private TokenFilterFactory tokenFilterFactory = null;
