@@ -31,6 +31,7 @@ import org.opensearch.index.analysis.CharFilterFactory;
 public class JapaneseIterationMarkCharFilterFactory extends AbstractCharFilterFactory {
 
     private static final String[] FACTORIES = new String[] { //
+            "org.codelibs.opensearch.extension.kuromoji.index.analysis.KuromojiIterationMarkCharFilterFactory", //
             "org.opensearch.index.analysis.KuromojiIterationMarkCharFilterFactory" };
 
     private CharFilterFactory charFilterFactory = null;
