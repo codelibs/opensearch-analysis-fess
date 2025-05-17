@@ -33,6 +33,7 @@ import org.opensearch.index.analysis.TokenizerFactory;
 public class ReloadableJapaneseTokenizerFactory extends AbstractTokenizerFactory {
 
     private static final String[] FACTORIES = new String[] { //
+            "org.codelibs.opensearch.extension.kuromoji.index.analysis.KuromojiTokenizerFactory", //
             "org.opensearch.index.analysis.KuromojiTokenizerFactory" };
 
     private TokenizerFactory tokenizerFactory = null;

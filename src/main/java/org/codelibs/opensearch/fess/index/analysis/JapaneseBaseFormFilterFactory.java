@@ -31,6 +31,7 @@ import org.opensearch.index.analysis.TokenFilterFactory;
 public class JapaneseBaseFormFilterFactory extends AbstractTokenFilterFactory {
 
     private static final String[] FACTORIES = new String[] { //
+            "org.codelibs.opensearch.extension.kuromoji.index.analysis.KuromojiBaseFormFilterFactory", //
             "org.opensearch.index.analysis.KuromojiBaseFormFilterFactory" };
 
     private TokenFilterFactory tokenFilterFactory = null;
