@@ -42,8 +42,6 @@ public class ReloadableJapaneseTokenizerFactory extends AbstractTokenizerFactory
             final Settings settings, final FessAnalysisService fessAnalysisService) {
         super(indexSettings, settings, name);
 
-        logger.warn("ReloadableJapaneseTokenizerFactory is deprecated. Use JapaneseTokenizerFactory instead.");
-
         for (final String factoryClass : FACTORIES) {
             final Class<?> tokenizerFactoryClass = fessAnalysisService.loadClass(factoryClass);
             if (tokenizerFactoryClass != null) {
