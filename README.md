@@ -269,7 +269,6 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 ## Support
 
 - **GitHub Issues**: [Report bugs or request features](https://github.com/codelibs/opensearch-analysis-fess/issues)
-- **Developer**: Shinsuke Sugaya ([@codelibs](https://github.com/codelibs))
 - **Organization**: [CodeLibs Project](https://www.codelibs.org/)
 
 ---
