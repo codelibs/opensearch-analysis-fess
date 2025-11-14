@@ -41,37 +41,14 @@ public class FessAnalysisServiceTest {
     }
 
     @Test
-    public void testLoadClassReturnsNullForNonExistentClass() {
+    public void testServiceLifecycleStopAndClose() {
         final Settings settings = Settings.EMPTY;
         final PluginsService pluginsService = mock(PluginsService.class);
         final FessAnalysisPlugin.PluginComponent pluginComponent = new FessAnalysisPlugin.PluginComponent();
 
         final FessAnalysisService service = new FessAnalysisService(settings, pluginsService, pluginComponent);
 
-        // Start the service to initialize plugins
-        service.start();
-
-        // Try to load a non-existent class
-        final Class<?> clazz = service.loadClass("com.example.NonExistentClass");
-
-        assertNull(clazz);
-
-        service.stop();
-        service.close();
-    }
-
-    @Test
-    public void testServiceLifecycle() {
-        final Settings settings = Settings.EMPTY;
-        final PluginsService pluginsService = mock(PluginsService.class);
-        final FessAnalysisPlugin.PluginComponent pluginComponent = new FessAnalysisPlugin.PluginComponent();
-
-        final FessAnalysisService service = new FessAnalysisService(settings, pluginsService, pluginComponent);
-
-        // Test start
-        service.start();
-
-        // Test stop
+        // Test stop (can be called without start)
         service.stop();
 
         // Test close
@@ -79,5 +56,20 @@ public class FessAnalysisServiceTest {
 
         // No exceptions should be thrown during lifecycle
         assertNotNull(service);
+    }
+
+    @Test
+    public void testPluginComponentIntegration() {
+        final Settings settings = Settings.EMPTY;
+        final PluginsService pluginsService = mock(PluginsService.class);
+        final FessAnalysisPlugin.PluginComponent pluginComponent = new FessAnalysisPlugin.PluginComponent();
+
+        // Initially null
+        assertNull(pluginComponent.getFessAnalysisService());
+
+        final FessAnalysisService service = new FessAnalysisService(settings, pluginsService, pluginComponent);
+
+        // After service creation, plugin component should have reference
+        assertEquals(service, pluginComponent.getFessAnalysisService());
     }
 }

@@ -25,8 +25,11 @@ import org.apache.lucene.analysis.TokenStream;
 import org.codelibs.opensearch.fess.service.FessAnalysisService;
 import org.junit.Before;
 import org.junit.Test;
+import org.opensearch.Version;
 import org.opensearch.common.settings.Settings;
+import org.opensearch.core.index.Index;
 import org.opensearch.env.Environment;
+import org.opensearch.index.IndexMetadata;
 import org.opensearch.index.IndexSettings;
 
 public class JapaneseBaseFormFilterFactoryTest {
@@ -37,7 +40,17 @@ public class JapaneseBaseFormFilterFactoryTest {
 
     @Before
     public void setUp() {
-        indexSettings = mock(IndexSettings.class);
+        final Index index = new Index("test_index", "test_uuid");
+        final Settings nodeSettings = Settings.builder().build();
+        indexSettings = new IndexSettings(
+            IndexMetadata.builder("test_index")
+                .settings(Settings.builder()
+                    .put(IndexMetadata.SETTING_VERSION_CREATED, Version.CURRENT)
+                    .put(IndexMetadata.SETTING_NUMBER_OF_SHARDS, 1)
+                    .put(IndexMetadata.SETTING_NUMBER_OF_REPLICAS, 0))
+                .build(),
+            nodeSettings
+        );
         environment = mock(Environment.class);
         fessAnalysisService = mock(FessAnalysisService.class);
 
