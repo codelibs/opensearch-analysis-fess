@@ -26,10 +26,10 @@ import org.codelibs.opensearch.fess.service.FessAnalysisService;
 import org.junit.Before;
 import org.junit.Test;
 import org.opensearch.Version;
+import org.opensearch.cluster.metadata.IndexMetadata;
 import org.opensearch.common.settings.Settings;
 import org.opensearch.core.index.Index;
 import org.opensearch.env.Environment;
-import org.opensearch.index.IndexMetadata;
 import org.opensearch.index.IndexSettings;
 
 public class JapaneseReadingFormFilterFactoryTest {
