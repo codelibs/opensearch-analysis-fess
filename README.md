@@ -13,13 +13,13 @@ A comprehensive analysis plugin for OpenSearch that provides custom analyzers, t
 - **Chinese Language Support**: Traditional Chinese character conversion and simplified Chinese tokenization
 - **System Index Management**: Automatic management of Fess-specific system indices
 - **Reloadable Configuration**: Support for dynamic Japanese tokenizer configuration reloading
-- **OpenSearch Integration**: Native integration with OpenSearch 3.2.0 and Lucene 10.2.2
+- **OpenSearch Integration**: Native integration with OpenSearch 3.7.0 and Lucene 10.4.0
 
 ## Tech Stack
 
 - **Java**: 21
-- **OpenSearch**: 3.2.0
-- **Apache Lucene**: 10.2.2
+- **OpenSearch**: 3.7.0
+- **Apache Lucene**: 10.4.0
 - **Build Tool**: Apache Maven 3.x
 - **Testing**: JUnit 4.13.2
 
@@ -28,7 +28,7 @@ A comprehensive analysis plugin for OpenSearch that provides custom analyzers, t
 ### Prerequisites
 
 - Java 21 or higher
-- OpenSearch 3.2.0 or compatible version
+- OpenSearch 3.7.0 or compatible version
 - Apache Maven 3.6+ (for building from source)
 
 ### Installation
@@ -36,7 +36,7 @@ A comprehensive analysis plugin for OpenSearch that provides custom analyzers, t
 #### Option 1: Install from Maven Repository
 
 ```bash
-$OPENSEARCH_HOME/bin/opensearch-plugin install org.codelibs:opensearch-analysis-fess:3.2.0
+$OPENSEARCH_HOME/bin/opensearch-plugin install org.codelibs:opensearch-analysis-fess:3.7.0
 ```
 
 #### Option 2: Build and Install from Source
@@ -50,7 +50,7 @@ cd opensearch-analysis-fess
 mvn clean package
 
 # Install the plugin
-$OPENSEARCH_HOME/bin/opensearch-plugin install file:///path/to/target/releases/opensearch-analysis-fess-3.2.0.jar
+$OPENSEARCH_HOME/bin/opensearch-plugin install file:///path/to/target/releases/opensearch-analysis-fess-3.7.0.jar
 ```
 
 ### Restart OpenSearch
