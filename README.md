@@ -24,13 +24,15 @@ component degrades quietly instead of failing the index.
 | 3.2.x          | 3.2.x              | 10.2.x         | 21+          |
 | 3.1.x          | 3.1.x              | 10.x           | 21+          |
 
-Released versions are listed on
+Released versions are listed in the
+[CodeLibs repository](https://maven.codelibs.org/release/org/codelibs/opensearch/opensearch-analysis-fess/).
+Version 3.8.0 and earlier were published to
 [Maven Central](https://central.sonatype.com/artifact/org.codelibs.opensearch/opensearch-analysis-fess/versions).
 
 ## Installation
 
 ```bash
-$OPENSEARCH_HOME/bin/opensearch-plugin install org.codelibs.opensearch:opensearch-analysis-fess:3.8.0
+$OPENSEARCH_HOME/bin/opensearch-plugin install https://maven.codelibs.org/release/org/codelibs/opensearch/opensearch-analysis-fess/3.8.1/opensearch-analysis-fess-3.8.1.zip
 ```
 
 Restart the node, then confirm that the plugin is loaded:
@@ -44,7 +46,7 @@ To install a locally built package instead:
 
 ```bash
 mvn clean package
-$OPENSEARCH_HOME/bin/opensearch-plugin install file:target/releases/opensearch-analysis-fess-3.8.0-SNAPSHOT.zip
+$OPENSEARCH_HOME/bin/opensearch-plugin install file:target/releases/opensearch-analysis-fess-3.8.1-SNAPSHOT.zip
 ```
 
 Use `opensearch-plugin remove analysis-fess` to uninstall.
