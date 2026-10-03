@@ -19,6 +19,7 @@ component degrades quietly instead of failing the index.
 
 | Plugin Version | OpenSearch Version | Lucene Version | Java Version |
 |----------------|--------------------|----------------|--------------|
+| 3.9.x          | 3.9.x              | 10.5.x         | 21+          |
 | 3.8.x          | 3.8.x              | 10.5.x         | 21+          |
 | 3.7.x          | 3.7.x              | 10.4.x         | 21+          |
 | 3.2.x          | 3.2.x              | 10.2.x         | 21+          |
@@ -32,7 +33,7 @@ Version 3.8.0 and earlier were published to
 ## Installation
 
 ```bash
-$OPENSEARCH_HOME/bin/opensearch-plugin install https://maven.codelibs.org/release/org/codelibs/opensearch/opensearch-analysis-fess/3.8.1/opensearch-analysis-fess-3.8.1.zip
+$OPENSEARCH_HOME/bin/opensearch-plugin install https://maven.codelibs.org/release/org/codelibs/opensearch/opensearch-analysis-fess/3.9.0/opensearch-analysis-fess-3.9.0.zip
 ```
 
 Restart the node, then confirm that the plugin is loaded:
@@ -46,7 +47,7 @@ To install a locally built package instead:
 
 ```bash
 mvn clean package
-$OPENSEARCH_HOME/bin/opensearch-plugin install file:target/releases/opensearch-analysis-fess-3.8.1-SNAPSHOT.zip
+$OPENSEARCH_HOME/bin/opensearch-plugin install file:target/releases/opensearch-analysis-fess-3.9.0-SNAPSHOT.zip
 ```
 
 Use `opensearch-plugin remove analysis-fess` to uninstall.
